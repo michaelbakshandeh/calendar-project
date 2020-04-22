@@ -8,7 +8,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 
-```{r, eval=FALSE, include=FALSE}
+```{r, include=FALSE}
 # you'll need to delete the eval=FALSE for this code chunk to execute
 # but keep the include = FALSE so that it does not show up in the knit file (on the webpage)
 
@@ -22,7 +22,41 @@ my_calendar <- ical_parse_df(file = "~/Dropbox (Personal)/git/calendar-project/D
     , length_min = end_datetime - start_datetime
     , length_sec = length_min*60
     , length_hrs = length_min/60
-    , date = floor_date(start_datetime, unit = "day"))
+    , date = floor_date(start_datetime, unit = "day")) %>%
+  # modifying faulty data entries/inconsistencies
+  select(summary, description, start_datetime, end_datetime, length_sec, length_min, length_hrs, date) %>%
+  mutate(description = ifelse(description == '', NA, as.character(description))) %>%
+  mutate(description = ifelse(description == '\nSchool', 'School', description)) %>%
+  mutate(description = ifelse(description == 'Exercise\nFamily', 'Exercise Family', description)) %>%
+  mutate(description = ifelse(summary == 'Dinner', 'Family', ifelse(summary == 'Sleep', 'Sleep', description))) %>%
+  mutate(description = ifelse(is.na(description) & summary != "Cole's Birthday", 'School', description)) %>%
+  mutate(description = ifelse(summary == "Walking", 'Exercise Family', description))
+```
+
+```{r, include=FALSE}
+# start of data wrangling section
+
+school_wrangled <- my_calendar %>%
+  filter(description == 'School') %>%
+  separate(summary, into=c('class', 'activity'), sep=': ', remove=FALSE) %>%
+  mutate(activity = ifelse(class %in% c('Data Science', 'Evolutionary', 'Groups', 'Abnormal', 'Work'), activity, class)) %>%
+  mutate(class = ifelse(class %in% c('Data Science', 'Evolutionary', 'Groups', 'Abnormal', 'Work'), class, NA)) %>%
+  mutate(class = ifelse(activity == 'Fellows Meeting', 'Work', class))
+
+#reorder columns for binding
+school_wrangled <- school_wrangled[,c(10, 1, 2, 3:9)]
+
+my_calendar1 <- my_calendar %>%
+  mutate(class = NA, activity = NA) %>%
+  filter(description != 'School')
+
+# reorder columns for binding
+my_calendar1 <- my_calendar1[,c(1, 9:10, 2:8)]
+
+my_calendar_summary_modified <- my_calendar1 %>%
+  rbind(school_wrangled)
+
+unique(my_calendar_summary_modified$description)
 ```
 
 # You can include section headers like this
