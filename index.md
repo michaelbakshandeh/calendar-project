@@ -105,11 +105,11 @@ ease of access:
 
     ## Don't know how to automatically pick scale for object of type difftime. Defaulting to continuous.
 
-![classes bar graph](classes_bar_graph.html)
+[classes bar graph](classes_bar_graph.html)
 
 I’ve also included the streamgraph here for an alternative visual:
 
-![streamgraph visual1](classes_streamgraph.html)
+[streamgraph visual1](classes_streamgraph.html)
 
 From the streamgraph, it appears that the I do the most work on Mondays
 and Tuesdays, and the amount of total work that I do decreases as the
