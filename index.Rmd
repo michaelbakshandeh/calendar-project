@@ -1,7 +1,6 @@
 ---
 output: md_document
 always_allow_html: yes
-runtime: shiny
 ---
 
 ```{r setup, include=FALSE}

@@ -37,6 +37,10 @@ And a numbered list like this:
 Results
 =======
 
-And here are my results . . .
+I made a Shiny app to display my results. Images relevant to the
+analysis will be screenshotted and included here, but the link to access
+the Shiny app is below. I have also embedded the app in-page for
+convenience.
 
-    # intersperse relevant figures and text
+[Link to Shiny
+app](https://michaelbakshandeh.shinyapps.io/calendar-project/)
