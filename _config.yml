@@ -1,6 +1,7 @@
 theme: jekyll-theme-merlot
 title: Diary of a Wimpy Bakshandeh- Cabin Fever
 subtitle: Documenting My Time During COVID19
+htmlwidgets: TRUE
 header_pages:
   - index.md
   - README.md

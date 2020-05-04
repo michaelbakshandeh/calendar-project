@@ -13,6 +13,7 @@ knitr::opts_chunk$set(echo = TRUE)
 # but keep the include = FALSE so that it does not show up in the knit file (on the webpage)
 
 library(tidyverse)
+library(phantom_js)
 library(lubridate)
 library(ical)
 library(htmlwidgets)
