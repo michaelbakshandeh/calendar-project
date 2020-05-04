@@ -161,7 +161,10 @@ p <- ggplot(final_form_streamgraph, aes_string(x='date', y='total', fill='class'
       theme(axis.text.x = element_text(angle = 90, hjust = 1))
     # ggplot(formatted_data(), aes(x=date))
       
-ggplotly(p)
+ggplotly(p) %>%
+  htmlwidgets::saveWidget("classes_bar_graph.html")
+
+htmltools::includeHTML("classes_bar_graph.html")
 ```
 
 I've also included the streamgraph here for an alternative visual:
@@ -172,6 +175,10 @@ pp <- streamgraph(final_form_streamgraph, key="class", value="total", date="date
                       order='inside-out') %>%
       sg_fill_brewer('Pastel2') %>%
       sg_axis_x(1, tick_interval='day', tick_format = '%a %b %d')
+
+pp %>% htmlwidgets::saveWidget('classes_streamgraph.html')
+htmltools::includeHTML('classes_streamgraph.html')
+  
 
 pp
 ```
