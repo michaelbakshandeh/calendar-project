@@ -163,9 +163,9 @@ p <- ggplot(final_form_streamgraph, aes_string(x='date', y='total', fill='class'
       
 ggplotly(p) %>%
   htmlwidgets::saveWidget("classes_bar_graph.html")
-
-htmltools::includeHTML("classes_bar_graph.html")
 ```
+
+![classes bar graph](classes_bar_graph.html)
 
 I've also included the streamgraph here for an alternative visual:
 
@@ -177,11 +177,9 @@ pp <- streamgraph(final_form_streamgraph, key="class", value="total", date="date
       sg_axis_x(1, tick_interval='day', tick_format = '%a %b %d')
 
 pp %>% htmlwidgets::saveWidget('classes_streamgraph.html')
-htmltools::includeHTML('classes_streamgraph.html')
-  
-
-pp
 ```
+
+![streamgraph visual1](classes_streamgraph.html)
 
 From the streamgraph, it appears that the I do the most work on Mondays and Tuesdays, and the amount of total work that I do decreases as the week progresses. On Mondays and Tuesdays in particular, there appears to be a spike in the amount of work I do in my "Work" class. This is likely because I am a TA for Multivariable Calculus, so I am logging in "Work" on these days that doesn't exist on any other day.
 
