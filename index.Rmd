@@ -13,7 +13,7 @@ knitr::opts_chunk$set(echo = TRUE)
 # but keep the include = FALSE so that it does not show up in the knit file (on the webpage)
 
 library(tidyverse)
-library(phantom_js)
+#library(phantomjs)
 library(lubridate)
 library(ical)
 library(htmlwidgets)
@@ -127,6 +127,8 @@ Each activity had a time stamp (beginning and ending time) and times are recorde
 # Results
 
 I made a Shiny app to display my results. Images relevant to the analysis will be screenshotted and included here, but the link to access the Shiny app is below. Git unfortunately does not allow for shiny apps to be embedded in-page, so please do click the link to open the app.
+
+New line added as test.
 
 [Link to Shiny app: Diary of a Wimpy Bakshandeh](https://michaelbakshandeh.shinyapps.io/calendar-project/)
 
