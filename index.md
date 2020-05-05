@@ -7,6 +7,8 @@ quantify the difference in routine that I experienced while
 transitioning from Amherst College to home. To best express this
 difference, I have created an interactive Shiny app that displays how my
 routine has changed and have analyzed the big trends that I noted.
+Diagrams are interspersed throughout my analysis to highlight crucial
+com
 
 Motivating Questions
 ====================
@@ -27,11 +29,6 @@ My hope was that I could glean some insights from this data about how I
 structure my time when I am in a less structured environment (Amherst
 College), where I had more explicitly scheduled activities and
 priorities.
-
-And, to brighten the mood during these somber times, here’s a picture of
-a cute puppy:
-
-![cute puppy](./img/cute_puppy.png)
 
 Data collection
 ---------------
@@ -62,33 +59,37 @@ I also tracked each category’s “description” as one of the following:
 I also included the particular activity that I was doing. I decided not
 to include activities in my Shiny app simply because most activities had
 unique identifiers (eg, Groups HW9 would be different from Groups Study
-for Quiz) so it would be difficult to interactively look at how I
-distributed my time by activity. I also felt that was not the objective
-of my study; however, this is certainly a future direction to look into.
+for Quiz). Therefore, it would be difficult to interactively look at how
+I distributed my time by activity. In addition, I felt that analyzing
+the time spent in my classes by specific activites was not the objective
+of my research, providing additional incentive to not include activities
+in my Shiny app. Analyzing how I spent time in my classes by activity,
+however, is definitely a good next step for this project.
 
-Each activity had a time stamp (beginning and ending time) and times are
-recorded in PST.
+Each activity had a time stamp (beginning and ending time) and times
+displayed in the graphs are recorded in **CST (Central Standard Time
+Zone)**.
 
 Results
 =======
 
 I made a Shiny app to display my results. Images relevant to the
 analysis will be screenshotted and included here, but the link to access
-the Shiny app is below. Git unfortunately does not allow for shiny apps
-to be embedded in-page, so please click the link here [Link to Shiny
+the Shiny app is below. Git unfortunately does not allow for Shiny apps
+to be embedded in-page, so please click the link here, [**Link to Shiny
 app: Diary of a Wimpy
-Bakshandeh](https://michaelbakshandeh.shinyapps.io/calendar-project/) to
-open the app.
+Bakshandeh**](https://michaelbakshandeh.shinyapps.io/calendar-project/)
+to open the app.
 
 Total Time spent in Classes over Time
 -------------------------------------
 
 The graph below is presented in my Shiny app, but the dodge histogram,
-[Distribution of Time Spent in Classes](classes_bar_graph.html), is
+[**Distribution of Time Spent in Classes**](classes_bar_graph.html), is
 reproduced at that link for ease of access.
 
-I’ve also included the streamgraph, [Evolution of Total Time Spent in
-Classes- Streamgraph](classes_streamgraph.html), for an alternative
+I’ve also included the streamgraph, [**Evolution of Total Time Spent in
+Classes- Streamgraph**](classes_streamgraph.html), for an alternative
 visual.
 
 From the streamgraph, it appears that the I do the most work on Mondays
@@ -207,10 +208,10 @@ evening.
 Distributions of Categories
 ---------------------------
 
-I have included the [Boxplot showing Distributions of
-Categories](boxplot.html) at that link. Similarly, I have shown the
-[Violin Plot showing Distributions of Categories](violin.html) at this
-link.
+I have included the [**Boxplot showing Distributions of
+Categories**](boxplot.html) at that link. Similarly, I have shown the
+[**Violin Plot showing Distributions of Categories**](violin.html) at
+this link.
 
 From the boxplot, we see that the distribution of sleep (a variable of
 interest) is left-skewed, with a median time of 8.50. The shape of the
@@ -265,9 +266,9 @@ collected on me is meant to explicitly benefit me in some way. For
 instance, if a company is giving my data to an advertising agency, I
 would expect that the ads would be more tailored to my interests as a
 result. Similarly, for Google, I would expect that my searches (data I
-am providing them) is being used to either filter sites that I visit
-more frequently to be the top results or to improve the quality of the
-suggested search terms from Google.
+am providing them) are being used to either improve the quality of my
+top results for searches or to improve the quality of the suggested
+search terms from Google.
 
 On the other hand, as someone who analyzes other’s data, there is a
 responsibility to make sure that you are presenting information
