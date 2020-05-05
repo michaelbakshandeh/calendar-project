@@ -182,3 +182,10 @@ I had each night was also relatively constant.
 This streamgraph provides evidence that I am productive on the weekends
 while I am in quarantine. It would be interesting to see if this changes
 once I am back at school.
+
+Relationship between Sleep and School
+-------------------------------------
+
+The scatterplot for this one should be viewed interactively, so please
+look at the Shiny app to see them under the tab that says “Productivity
+vs. Sleep Patterns.”
