@@ -2,16 +2,10 @@
 
 ## Story of an Extended Time in Quarantine
 
-## Welcome to GitHub Pages
+While you were sitting at home during quarantine, have you *felt* like you're doing something different in your routine, but aren't quite sure *what's* different in your routine? One of the biggest challenges of transitioning to work-from-home or school-from-home is maintaining a steady routine, one which was clearly disrupted by the novel COVID-19.
 
-You can use the [editor on GitHub](https://github.com/michaelbakshandeh/calendar-project/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+The purpose of this project is to analyze how I spent my time during part of a six-week period of online learning at Amherst College. Data was recorded for two weeks and a Shiny app was made to demonstrate the results.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+I analyze what the Shiny app shows and the implications of my Shiny app to my future as a data scientist.
 
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/michaelbakshandeh/calendar-project/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+The link to the website for this repo is here: [**Diary of a Wimpy Bakshandeh-Cabin Fever**](https://michaelbakshandeh.github.io/calendar-project/)
