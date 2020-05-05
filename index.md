@@ -109,7 +109,10 @@ ease of access:
 
 I’ve also included the streamgraph here for an alternative visual:
 
-[streamgraph visual1](classes_streamgraph.html)
+&lt;&lt;insertHTML:\[classes\_streamgraph.html\]
+
+[Evolution of Total Time Spent in Classes-
+Streamgraph](classes_streamgraph.html)
 
 From the streamgraph, it appears that the I do the most work on Mondays
 and Tuesdays, and the amount of total work that I do decreases as the
