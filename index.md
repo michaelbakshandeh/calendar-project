@@ -75,42 +75,19 @@ Results
 I made a Shiny app to display my results. Images relevant to the
 analysis will be screenshotted and included here, but the link to access
 the Shiny app is below. Git unfortunately does not allow for shiny apps
-to be embedded in-page, so please do click the link to open the app.
-
-[Link to Shiny app: Diary of a Wimpy
-Bakshandeh](https://michaelbakshandeh.shinyapps.io/calendar-project/)
+to be embedded in-page, so please click the link here [Link to Shiny
+app: Diary of a Wimpy
+Bakshandeh](https://michaelbakshandeh.shinyapps.io/calendar-project/) to
+open the app.
 
 Total Time spent in Classes over Time
 -------------------------------------
 
-TODO: Embed widgets into Github Pages
+The graph below is presented in my Shiny app, but the dodge histogram,
+[Distribution of Time Spent in Classes](classes_bar_graph.html), is
+reproduced at that link for ease of access.
 
-The graph below is presented in my Shiny app, but is reproduced here for
-ease of access:
-
-    ## Adding missing grouping variables: `class`, `date`
-
-    ## Warning: funs() is soft deprecated as of dplyr 0.8.0
-    ## Please use a list of either functions or lambdas: 
-    ## 
-    ##   # Simple named list: 
-    ##   list(mean = mean, median = median)
-    ## 
-    ##   # Auto named with `tibble::lst()`: 
-    ##   tibble::lst(mean, median)
-    ## 
-    ##   # Using lambdas
-    ##   list(~ mean(., trim = .2), ~ median(., na.rm = TRUE))
-    ## This warning is displayed once per session.
-
-    ## Don't know how to automatically pick scale for object of type difftime. Defaulting to continuous.
-
-![](index_files/figure-markdown_strict/unnamed-chunk-3-1.png)
-
-[Distribution of Time Spent in Classes](classes_bar_graph.html)
-
-I’ve also included the streamgraph here for an alternative visual:
-
+I’ve also included the streamgraph here for an alternative visual
 [Evolution of Total Time Spent in Classes-
 Streamgraph](classes_streamgraph.html)
 
@@ -146,26 +123,9 @@ the course of my two weeks.
 I have again included the link to the static summary containing all of
 the categories here:
 
-    final_form_streamgraph1 <- my_calendar_summary_modified %>%
-      select(-c('length_min', 'length_sec')) %>%
-      group_by(description, date) %>%
-      select(starts_with('length_')) %>%
-      summarise_all(funs('total'=sum)) %>%
-      mutate(date = as.Date(date))
-
     ## Adding missing grouping variables: `description`, `date`
 
-    # displays the streamgraph
-    pp <- streamgraph(final_form_streamgraph1, key="description", value="total", date="date", interpolate='cardinal', 
-                          order='inside-out') %>%
-          sg_fill_brewer('Pastel2') %>%
-          sg_axis_x(1, tick_interval='day', tick_format = '%a %b %d')
-
-    pp
-
 ![](index_files/figure-markdown_strict/unnamed-chunk-5-1.png)
-
-    #pp %>% htmlwidgets::saveWidget('cat_streamgraph.html')
 
 [Category Streamgraph](cat_streamgraph.html)
 
@@ -189,3 +149,137 @@ Relationship between Sleep and School
 The scatterplot for this one should be viewed interactively, so please
 look at the Shiny app to see them under the tab that says “Productivity
 vs. Sleep Patterns.”
+
+The correlation matrix is displayed here:
+
+![Correlation Matrix](./img/cor_matrix.png)
+
+In this correlation matrix, as the legend shows, white dots are
+**insignificant** correlations, shaded blue dots are **negative**
+correlations, and shaded red dots are **positive** correlations.
+
+There is clearly a negative correlation between:
+
+-   sleep and school (as amount of schoolwork increased, the amount of
+    sleep I got decreased)
+
+In addition, there is also a significant negative relationship between:
+
+-   school and exercise (as the amount of schoolwork increased, the
+    amount of exercise decreased)
+-   family and school (as the amount of family time I spent increased,
+    the amount of schoolwork I did decreased)
+
+The amount of time I spent doing social activities was limited, so I am
+not considering those correlations.
+
+These correlations suggest that I was less productive on the days that I
+slept more. To validate this claim, I have included the scatterplot that
+strictly incorporates school and sleep. It is included below:
+
+![Scatterplot Sleep vs School](./img/scatterplot1.png)
+
+As the smoothed line shows, there is clearly an inverse relationship
+between hours of sleep and total time spent on schoolwork. This
+relationship could be due to going to bed later when I’m doing a lot of
+schoolwork, or that I feel less motivated to do schoolwork when I am
+sleeping more.
+
+What Time of Day Am I Most Productive?
+--------------------------------------
+
+This graph should be viewed in the Shiny app under the “Amount of
+Schoolwork Throughout the Day” tab, but an image has been included here
+for illustrative purposes:
+
+![Time doing Schoolwork per Day](./img/school_during_day.png)
+
+There is almost certainly a general pattern here that is immediately
+apparent. For most days, there is a spike in the amount of work that I
+am doing early in the day (around 10am EDT). The amount of work that I
+am doing is steadily increasing until around 2pm EDT. Then, it appears
+that the work I am doing is plateuing. Right around dinner time, the
+amount of work done starts to increase again, but this time the work
+increases at a slower rate. This suggests that my most productive time
+is in the morning, and then I am slightly less productive in the
+evening.
+
+Distributions of Categories
+---------------------------
+
+I have included the [Boxplot showing Distributions of
+Categories](boxplot.html) at that link. Similarly, I have shown the
+[Violin Plot showing Distributions of Categories](violin.html) at this
+link.
+
+From the boxplot, we see that the distribution of sleep (a variable of
+interest) is left-skewed, with a median time of 8.50. The shape of the
+violin plot confirms that the distribution of the variable is
+left-skewed.
+
+On the other hand, we can see that the distribution of the total amount
+of time spent doing schoolwork is left-skewed. The maximum amount of
+time spent working on school was 11 hours, and the median amount of time
+spent was 7.25 hours. The violin plot confirms that the distribution of
+School is more symmetric than that of sleep, but still right skewed.
+
+The distributions of Exercise, Family, and Social are all left skewed,
+as evidenced from the boxplots. However, the range of these three
+variables are all similar: the distributions range from 0 to around 4
+(except for one point beyond the upper fence of the Family boxplot).
+
+Reflection
+==========
+
+How Do I Structure my Time?
+---------------------------
+
+Overall, the findings about how I structure my time are not surprising.
+I suspected that I spent the most time in Groups, and I suspected that I
+was relatively inefficient in the middle of the day. Furthermore, the
+distributions of the categories appear to make sense. I aim for 8 hours
+of sleep a night, so the distribution should have a median value of
+around 8, and the other distributions should centered around 1 or 2.
+
+The most interesting discovery I made from this data analysis is that
+the amount of time that I sleep is inversely related to the amount of
+schoolwork that I do. As I mentioned, it would be interesting to see if
+this is due to too much work, unproductiveness when I sleep for longer
+than usual, or a combination of the two factors.
+
+On the Process of Data Collection
+---------------------------------
+
+This process was the first time that I have ever both collected and
+analyzed data. It is interesting to reflect on what I learned being on
+both side of the data analysis process.
+
+First, as some who provides data, I feel that our data should be
+anonymized (ie, my name should not be given out with my data) whenever
+it is given out. Furthermore, I would expect that any data that is being
+collected on me is meant to explicitly benefit me in some way. For
+instance, if a company is giving my data to an advertising agency, I
+would expect that the ads would be more tailored to my interests as a
+result. Similarly, for Google, I would expect that my searches (data I
+am providing them) is being used to either filter sites that I visit
+more frequently to be the top results or to improve the quality of the
+suggested search terms from Google.
+
+On the other hand, as someone who analyzes other’s data, there is a
+responsibility to make sure that you are presenting information
+accurately and that you are presenting the information in an anonymized
+way. It can often be temptimg to try and present the statistics a
+certain way when, for instance, you are trying to appease a client.
+However, it is more important to present your data accurately and
+present what you have learned from it. Sometimes, not learning anything
+new or presenting something that someone else wants to see is
+interesting in its own matter.
+
+For instance, in this project, I didn’t learn anything new about my
+routine, even though I really hoped that this project would help me
+learn something new about my routine. I could have tried to present the
+data in a way that was interesting and revealed something interesting
+about my routine. However, this would have been unethical to myself and
+to everyone who views this webpage. It is a data scientist’s ethical
+duty to ensure that the information that he is presenting is ethical and
+anonymized.
