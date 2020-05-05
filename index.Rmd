@@ -179,7 +179,7 @@ We will now look at the how total time spent on activities changed over the cour
 
 I have again included the link to the static summary containing all of the categories here:
 
-```{r, echo=FALSE, warning=FALSE}
+```{r, echo=FALSE, include=FALSE, warning=FALSE}
 final_form_streamgraph1 <- my_calendar_summary_modified %>%
   select(-c('length_min', 'length_sec')) %>%
   group_by(description, date) %>%

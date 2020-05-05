@@ -125,10 +125,6 @@ the course of my two weeks.
 I have again included the link to the static summary containing all of
 the categories here:
 
-    ## Adding missing grouping variables: `description`, `date`
-
-![](index_files/figure-markdown_strict/unnamed-chunk-5-1.png)
-
 [Category Streamgraph](./html_files/cat_streamgraph.html)
 
 As expected, the total amount of time that I spent doing activities
