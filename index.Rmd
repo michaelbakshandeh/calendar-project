@@ -126,7 +126,7 @@ I made a Shiny app to display my results. Images relevant to the analysis will b
 
 ## Total Time spent in Classes over Time
 
-The graph below is presented in my Shiny app, but the dodge histogram, [**Distribution of Time Spent in Classes**](classes_bar_graph.html), is reproduced at that link for ease of access.
+The graph below is presented in my Shiny app, but the dodge histogram, [**Distribution of Time Spent in Classes**](./html_files/classes_bar_graph.html), is reproduced at that link for ease of access.
 
 ```{r, echo=FALSE, include=FALSE}
 # manipulations on my_calendar_summary_modified
@@ -155,7 +155,7 @@ p <- ggplot(final_form_streamgraph, aes_string(x='date', y='total', fill='class'
 ggplotly(p)
 ```
 
-I've also included the streamgraph, [**Evolution of Total Time Spent in Classes- Streamgraph**](classes_streamgraph.html), for an alternative visual.
+I've also included the streamgraph, [**Evolution of Total Time Spent in Classes- Streamgraph**](./html_files/classes_streamgraph.html), for an alternative visual.
 
 ```{r, echo=FALSE, include=FALSE}
 # displays the streamgraph
@@ -197,7 +197,7 @@ pp
 #pp %>% htmlwidgets::saveWidget('cat_streamgraph.html')
 ```
 
-[Category Streamgraph](cat_streamgraph.html)
+[Category Streamgraph](./html_files/cat_streamgraph.html)
 
 As expected, the total amount of time that I spent doing activities remains relatively constant, but there is a noticable dip in the weekend. This supports my theory that I am not nearly as productive during the weekend as I am during the week.
 
@@ -274,7 +274,7 @@ ggplotly(p1) %>% htmlwidgets::saveWidget('boxplot.html')
 ggplotly(p2) %>% htmlwidgets::saveWidget('violin.html')
 ```
 
-I have included the [**Boxplot showing Distributions of Categories**](boxplot.html) at that link. Similarly, I have shown the [**Violin Plot showing Distributions of Categories**](violin.html) at this link.
+I have included the [**Boxplot showing Distributions of Categories**](./html_files/boxplot.html) at that link. Similarly, I have shown the [**Violin Plot showing Distributions of Categories**](./html_files/violin.html) at this link.
 
 From the boxplot, we see that the distribution of sleep (a variable of interest) is left-skewed, with a median time of 8.50. The shape of the violin plot confirms that the distribution of the variable is left-skewed.
 

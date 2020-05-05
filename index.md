@@ -85,12 +85,13 @@ Total Time spent in Classes over Time
 -------------------------------------
 
 The graph below is presented in my Shiny app, but the dodge histogram,
-[**Distribution of Time Spent in Classes**](classes_bar_graph.html), is
-reproduced at that link for ease of access.
+[**Distribution of Time Spent in
+Classes**](./html_files/classes_bar_graph.html), is reproduced at that
+link for ease of access.
 
 I’ve also included the streamgraph, [**Evolution of Total Time Spent in
-Classes- Streamgraph**](classes_streamgraph.html), for an alternative
-visual.
+Classes- Streamgraph**](./html_files/classes_streamgraph.html), for an
+alternative visual.
 
 From the streamgraph, it appears that the I do the most work on Mondays
 and Tuesdays, and the amount of total work that I do decreases as the
@@ -128,7 +129,7 @@ the categories here:
 
 ![](index_files/figure-markdown_strict/unnamed-chunk-5-1.png)
 
-[Category Streamgraph](cat_streamgraph.html)
+[Category Streamgraph](./html_files/cat_streamgraph.html)
 
 As expected, the total amount of time that I spent doing activities
 remains relatively constant, but there is a noticable dip in the
@@ -209,9 +210,9 @@ Distributions of Categories
 ---------------------------
 
 I have included the [**Boxplot showing Distributions of
-Categories**](boxplot.html) at that link. Similarly, I have shown the
-[**Violin Plot showing Distributions of Categories**](violin.html) at
-this link.
+Categories**](./html_files/boxplot.html) at that link. Similarly, I have
+shown the [**Violin Plot showing Distributions of
+Categories**](./html_files/violin.html) at this link.
 
 From the boxplot, we see that the distribution of sleep (a variable of
 interest) is left-skewed, with a median time of 8.50. The shape of the
