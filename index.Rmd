@@ -80,6 +80,8 @@ unique(my_calendar_summary_modified$description)
 #write_csv(my_calendar_summary_modified, '~/Dropbox (Personal)/git/calendar-project/my_calendar_summary.csv')
 ```
 
+# How Michael Spent his Time During Quarantine
+
 # Purpose of this Website
 
 COVID-19 was an extremely tumultuous time for everyone, with most people experiencing disruptions to their daily lives and routines. I wanted to quantify the difference in routine that I experienced while transitioning from Amherst College to home. To best express this difference, I have created an interactive Shiny app that displays how my routine has changed and have analyzed the big trends that I noted. Diagrams are interspersed throughout my analysis to highlight crucial com
