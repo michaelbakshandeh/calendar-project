@@ -296,6 +296,8 @@ The most interesting discovery I made from this data analysis is that the amount
 
 ## On the Process of Data Collection
 
+![Ethics](./img/ethics.jpg)
+
 This process was the first time that I have ever both collected and analyzed data. It is interesting to reflect on what I learned being on both side of the data analysis process.
 
 First, as some who provides data, I feel that our data should be anonymized (ie, my name should not be given out with my data) whenever it is given out. Furthermore, I would expect that any data that is being collected on me is meant to explicitly benefit me in some way. For instance, if a company is giving my data to an advertising agency, I would expect that the ads would be more tailored to my interests as a result. Similarly, for Google, I would expect that my searches (data I am providing them) is being used to either filter sites that I visit more frequently to be the top results or to improve the quality of the suggested search terms from Google.

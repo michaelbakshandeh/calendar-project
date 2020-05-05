@@ -87,9 +87,9 @@ The graph below is presented in my Shiny app, but the dodge histogram,
 [Distribution of Time Spent in Classes](classes_bar_graph.html), is
 reproduced at that link for ease of access.
 
-I’ve also included the streamgraph here for an alternative visual
-[Evolution of Total Time Spent in Classes-
-Streamgraph](classes_streamgraph.html)
+I’ve also included the streamgraph, [Evolution of Total Time Spent in
+Classes- Streamgraph](classes_streamgraph.html), for an alternative
+visual.
 
 From the streamgraph, it appears that the I do the most work on Mondays
 and Tuesdays, and the amount of total work that I do decreases as the
@@ -234,6 +234,8 @@ Reflection
 How Do I Structure my Time?
 ---------------------------
 
+![Time to Plan](./img/time_to_plan.jpg)
+
 Overall, the findings about how I structure my time are not surprising.
 I suspected that I spent the most time in Groups, and I suspected that I
 was relatively inefficient in the middle of the day. Furthermore, the
@@ -249,6 +251,8 @@ than usual, or a combination of the two factors.
 
 On the Process of Data Collection
 ---------------------------------
+
+![Ethics](./img/ethics.jpg)
 
 This process was the first time that I have ever both collected and
 analyzed data. It is interesting to reflect on what I learned being on
