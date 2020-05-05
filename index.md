@@ -83,6 +83,8 @@ Bakshandeh](https://michaelbakshandeh.shinyapps.io/calendar-project/)
 Total Time spent in Classes over Time
 -------------------------------------
 
+TODO: Embed widgets into Github Pages
+
 The graph below is presented in my Shiny app, but is reproduced here for
 ease of access:
 
@@ -103,7 +105,9 @@ ease of access:
 
     ## Don't know how to automatically pick scale for object of type difftime. Defaulting to continuous.
 
-[classes bar graph](classes_bar_graph.html)
+![](index_files/figure-markdown_strict/unnamed-chunk-3-1.png)
+
+[Distribution of Time Spent in Classes](classes_bar_graph.html)
 
 I’ve also included the streamgraph here for an alternative visual:
 
@@ -135,3 +139,41 @@ least amount of area in the streamgraph.
 
 Distribution of Categories
 --------------------------
+
+We will now look at the how total time spent on activities changed over
+the course of my two weeks.
+
+I have again included the link to the static summary containing all of
+the categories here:
+
+    final_form_streamgraph1 <- my_calendar_summary_modified %>%
+      select(-c('length_min', 'length_sec')) %>%
+      group_by(description, date) %>%
+      select(starts_with('length_')) %>%
+      summarise_all(funs('total'=sum)) %>%
+      mutate(date = as.Date(date))
+
+    ## Adding missing grouping variables: `description`, `date`
+
+    # displays the streamgraph
+    pp <- streamgraph(final_form_streamgraph1, key="description", value="total", date="date", interpolate='cardinal', 
+                          order='inside-out') %>%
+          sg_fill_brewer('Pastel2') %>%
+          sg_axis_x(1, tick_interval='day', tick_format = '%a %b %d')
+
+    pp
+
+![](index_files/figure-markdown_strict/unnamed-chunk-5-1.png)
+
+    #pp %>% htmlwidgets::saveWidget('cat_streamgraph.html')
+
+[Category Streamgraph](cat_streamgraph.html)
+
+As expected, the total amount of time that I spent doing activities
+remains relatively constant, but there is a noticable dip in the
+weekend. This supports my theory that I am not nearly as productive
+during the weekend as I am during the week.
+
+The amount of time spent exercising appears to be relatively constant,
+the amount of time that I spent doing schoolwork appears to be greater
+in the full week that I was recording data,
