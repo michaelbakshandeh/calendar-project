@@ -206,10 +206,19 @@ pp <- streamgraph(final_form_streamgraph1, key="description", value="total", dat
       sg_fill_brewer('Pastel2') %>%
       sg_axis_x(1, tick_interval='day', tick_format = '%a %b %d')
 
-pp %>% htmlwidgets::saveWidget('cat_streamgraph.html')
+pp
+#pp %>% htmlwidgets::saveWidget('cat_streamgraph.html')
 ```
 
 [Category Streamgraph](cat_streamgraph.html)
+
+As expected, the total amount of time that I spent doing activities remains relatively constant, but there is a noticable dip in the weekend. This supports my theory that I am not nearly as productive during the weekend as I am during the week.
+
+The amount of time spent exercising appears to be relatively constant, the amount of time that I spent doing schoolwork appears to be greater in the full week that I was recording data, and the amount of sleep that I had each night was also relatively constant.
+
+This streamgraph provides evidence that I am productive on the weekends while I am in quarantine. It would be interesting to see if this changes once I am back at school.
+
+
 
 
 

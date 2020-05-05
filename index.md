@@ -176,4 +176,9 @@ during the weekend as I am during the week.
 
 The amount of time spent exercising appears to be relatively constant,
 the amount of time that I spent doing schoolwork appears to be greater
-in the full week that I was recording data,
+in the full week that I was recording data, and the amount of sleep that
+I had each night was also relatively constant.
+
+This streamgraph provides evidence that I am productive on the weekends
+while I am in quarantine. It would be interesting to see if this changes
+once I am back at school.
