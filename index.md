@@ -77,8 +77,6 @@ analysis will be screenshotted and included here, but the link to access
 the Shiny app is below. Git unfortunately does not allow for shiny apps
 to be embedded in-page, so please do click the link to open the app.
 
-New line added as test.
-
 [Link to Shiny app: Diary of a Wimpy
 Bakshandeh](https://michaelbakshandeh.shinyapps.io/calendar-project/)
 
