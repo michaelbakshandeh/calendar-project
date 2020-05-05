@@ -107,8 +107,6 @@ ease of access:
 
 I’ve also included the streamgraph here for an alternative visual:
 
-&lt;&lt;insertHTML:\[classes\_streamgraph.html\]
-
 [Evolution of Total Time Spent in Classes-
 Streamgraph](classes_streamgraph.html)
 

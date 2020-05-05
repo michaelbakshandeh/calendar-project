@@ -132,6 +132,8 @@ I made a Shiny app to display my results. Images relevant to the analysis will b
 
 ## Total Time spent in Classes over Time
 
+TODO: Embed widgets into Github Pages
+
 The graph below is presented in my Shiny app, but is reproduced here for ease of access:
 
 ```{r, echo=FALSE}
@@ -159,11 +161,10 @@ p <- ggplot(final_form_streamgraph, aes_string(x='date', y='total', fill='class'
       theme(axis.text.x = element_text(angle = 90, hjust = 1))
     # ggplot(formatted_data(), aes(x=date))
       
-ggplotly(p) %>%
-  htmlwidgets::saveWidget("classes_bar_graph.html")
+ggplotly(p)
 ```
 
-[classes bar graph](classes_bar_graph.html)
+[Distribution of Time Spent in Classes](classes_bar_graph.html)
 
 I've also included the streamgraph here for an alternative visual:
 
@@ -176,7 +177,6 @@ pp <- streamgraph(final_form_streamgraph, key="class", value="total", date="date
 
 pp %>% htmlwidgets::saveWidget('classes_streamgraph.html')
 ```
-<<insertHTML:[classes_streamgraph.html]
 
 [Evolution of Total Time Spent in Classes- Streamgraph](classes_streamgraph.html)
 
@@ -188,7 +188,28 @@ My other classes (Data Science, Evolutionary, and Abnromal) appear not too time-
 
 ## Distribution of Categories
 
+We will now look at the how total time spent on activities changed over the course of my two weeks.
 
+I have again included the link to the static summary containing all of the categories here:
+
+```{r}
+final_form_streamgraph1 <- my_calendar_summary_modified %>%
+  select(-c('length_min', 'length_sec')) %>%
+  group_by(description, date) %>%
+  select(starts_with('length_')) %>%
+  summarise_all(funs('total'=sum)) %>%
+  mutate(date = as.Date(date))
+
+# displays the streamgraph
+pp <- streamgraph(final_form_streamgraph1, key="description", value="total", date="date", interpolate='cardinal', 
+                      order='inside-out') %>%
+      sg_fill_brewer('Pastel2') %>%
+      sg_axis_x(1, tick_interval='day', tick_format = '%a %b %d')
+
+pp %>% htmlwidgets::saveWidget('cat_streamgraph.html')
+```
+
+[Category Streamgraph](cat_streamgraph.html)
 
 
 
