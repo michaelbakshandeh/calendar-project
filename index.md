@@ -8,10 +8,10 @@ COVID-19 was an extremely tumultuous time for everyone, with most people
 experiencing disruptions to their daily lives and routines. I wanted to
 quantify the difference in routine that I experienced while
 transitioning from Amherst College to home. To best express this
-difference, I have created an interactive Shiny app that displays how my
-routine has changed and have analyzed the big trends that I noted.
-Diagrams are interspersed throughout my analysis to highlight crucial
-com
+difference, I created an interactive Shiny app that displays how my
+routine changed and analyzed the big trends that I noted on this
+website. Diagrams are interspersed throughout my analysis to highlight
+crucial components of the app.
 
 Motivating Questions
 ====================
@@ -29,9 +29,7 @@ My primary questions of interest were the following:
     category?
 
 My hope was that I could glean some insights from this data about how I
-structure my time when I am in a less structured environment (Amherst
-College), where I had more explicitly scheduled activities and
-priorities.
+structure my time when I am in a less structured environment, my home.
 
 Data collection
 ---------------
@@ -81,10 +79,11 @@ Shiny App
 
 I made a Shiny app to display my results. Images relevant to the
 analysis will be screenshotted and included here, but the link to access
-the Shiny app is below. Git unfortunately does not allow for Shiny apps
-to be embedded in-page, so please click the link here, [**Link to Shiny
-app: Diary of a Wimpy
-Bakshandeh**](https://michaelbakshandeh.shinyapps.io/calendar-project/)
+the Shiny app is below.
+
+Git unfortunately does not allow for Shiny apps to be embedded in-page,
+so please click the link here, [**Link to Shiny app: Diary of a Wimpy
+Bakshandeh**](https://michaelbakshandeh.shinyapps.io/calendar-project/),
 to open the app.
 
 Total Time spent in Classes over Time
@@ -97,17 +96,17 @@ link for ease of access.
 
 I’ve also included the streamgraph, [**Evolution of Total Time Spent in
 Classes- Streamgraph**](./html_files/classes_streamgraph.html), for an
-alternative visual.
+alternative way to visualize the data.
 
 From the streamgraph, it appears that the I do the most work on Mondays
 and Tuesdays, and the amount of total work that I do decreases as the
 week progresses. On Mondays and Tuesdays in particular, there appears to
 be a spike in the amount of work I do in my “Work” class. This is likely
 because I am a TA for Multivariable Calculus, so I am logging in “Work”
-on these days that doesn’t exist on any other day.
+on these days that I’m not doing on any other day of the week.
 
 Furthermore, as affirmed by the bar chart and the streamgraph, the class
-that is the most “time consuming” for me is definitely Groups. There
+that is the most “time consuming” for me appears to be Groups. There
 appears to be spikes in the amount of work I do in Groups on Wednesdays
 and Thursdays (for instance, on Wednesday April 8th I worked on Groups
 for 4.5 hours). This is likely because we have weekly quizzes in Groups
@@ -120,7 +119,9 @@ too time-consuming in comparison. There is a spike in the amount of work
 I did in Evolutionary on Monday, April 13th, and there is also a spike
 in the amount of work I did in Data Science one week later. Abnromal
 overall appears to be the least time consuming, since it takes up the
-least amount of area in the streamgraph.
+least amount of area in the streamgraph. There is one day where I
+appeared to spend a significant amount of time in Abnormal, but on most
+other days I appear to only spend around an hour.
 
 Distribution of Categories
 --------------------------
@@ -136,16 +137,15 @@ the categories here:
 As expected, the total amount of time that I spent doing activities
 remains relatively constant, but there is a noticable dip in the
 weekend. This supports my theory that I am not nearly as productive
-during the weekend as I am during the week.
+during the weekend as I am during the week. It would be interesting to
+see if this pattern changes once I am back at school.
 
 The amount of time spent exercising appears to be relatively constant,
-the amount of time that I spent doing schoolwork appears to be greater
-in the full week that I was recording data, and the amount of sleep that
-I had each night was also relatively constant.
-
-This streamgraph provides evidence that I am productive on the weekends
-while I am in quarantine. It would be interesting to see if this changes
-once I am back at school.
+except for the first Friday where I exercised for 4.5 hours. The amount
+of time that I spent doing schoolwork appears to be greater in the full
+week that I was recording data than at any other point in the two week
+interval. Finally, the amount of sleep that I had each night was also
+relatively constant.
 
 Relationship between Sleep and School
 -------------------------------------
@@ -174,6 +174,9 @@ In addition, there is also a significant negative relationship between:
 -   family and school (as the amount of family time I spent increased,
     the amount of schoolwork I did decreased)
 
+The interactive version of the correlation matrix provides the specific
+values of the pairwise correlations.
+
 The amount of time I spent doing social activities was limited, so I am
 not considering those correlations.
 
@@ -188,6 +191,11 @@ between hours of sleep and total time spent on schoolwork. This
 relationship could be due to going to bed later when I’m doing a lot of
 schoolwork, or that I feel less motivated to do schoolwork when I am
 sleeping more.
+
+However, as we add in more categories, the smoothed line becomes
+flatter. This suggests that there is no significant relationship between
+how much time I spent sleeping and the amount of time I spent doing
+structured activities.
 
 What Time of Day Am I Most Productive?
 --------------------------------------
@@ -217,8 +225,8 @@ shown the [**Violin Plot showing Distributions of
 Categories**](./html_files/violin.html) at this link.
 
 From the boxplot, we see that the distribution of sleep (a variable of
-interest) is left-skewed, with a median time of 8.50. The shape of the
-violin plot confirms that the distribution of the variable is
+interest) is left-skewed, with a median time of 8.50 hours. The shape of
+the violin plot confirms that the distribution of the variable is
 left-skewed.
 
 On the other hand, we can see that the distribution of the total amount
@@ -230,7 +238,8 @@ School is more symmetric than that of sleep, but still right skewed.
 The distributions of Exercise, Family, and Social are all left skewed,
 as evidenced from the boxplots. However, the range of these three
 variables are all similar: the distributions range from 0 to around 4
-(except for one point beyond the upper fence of the Family boxplot).
+hours (except for one point beyond the upper fence of the Family
+boxplot).
 
 Reflection
 ==========
@@ -245,7 +254,8 @@ I suspected that I spent the most time in Groups, and I suspected that I
 was relatively inefficient in the middle of the day. Furthermore, the
 distributions of the categories appear to make sense. I aim for 8 hours
 of sleep a night, so the distribution should have a median value of
-around 8, and the other distributions should centered around 1 or 2.
+around 8 hours, and the other distributions should centered around 1 or
+2 hours.
 
 The most interesting discovery I made from this data analysis is that
 the amount of time that I sleep is inversely related to the amount of
@@ -258,9 +268,9 @@ On the Process of Data Collection
 
 ![Ethics](./img/ethics.jpg)
 
-This process was the first time that I have ever both collected and
-analyzed data. It is interesting to reflect on what I learned being on
-both side of the data analysis process.
+This process was the first time that I both collected and analyzed data.
+It is interesting to reflect on what I learned being on both side of the
+data analysis process.
 
 First, as some who provides data, I feel that our data should be
 anonymized (ie, my name should not be given out with my data) whenever
@@ -288,6 +298,7 @@ routine, even though I really hoped that this project would help me
 learn something new about my routine. I could have tried to present the
 data in a way that was interesting and revealed something interesting
 about my routine. However, this would have been unethical to myself and
-to everyone who views this webpage. It is a data scientist’s ethical
-duty to ensure that the information that he is presenting is ethical and
-anonymized.
+to everyone who views this webpage. Furthermore, this analysis proved to
+me that my intuitions about how I structure my time are correct. It is a
+data scientist’s ethical duty to ensure that the information that he is
+presenting is ethical and anonymized.
