@@ -73,6 +73,9 @@ Zone)**.
 Results
 =======
 
+Shiny App
+---------
+
 I made a Shiny app to display my results. Images relevant to the
 analysis will be screenshotted and included here, but the link to access
 the Shiny app is below. Git unfortunately does not allow for Shiny apps
@@ -125,7 +128,7 @@ the course of my two weeks.
 I have again included the link to the static summary containing all of
 the categories here:
 
-[Category Streamgraph](./html_files/cat_streamgraph.html)
+[**Category Streamgraph**](./html_files/cat_streamgraph.html)
 
 As expected, the total amount of time that I spent doing activities
 remains relatively constant, but there is a noticable dip in the
